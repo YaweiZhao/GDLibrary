@@ -175,7 +175,7 @@ function [w, infos] = gd_nesterov(problem, options)
 
         % store infoa
         infos.iter = [infos.iter iter];
-        infos.time = [infos.time elapsed_time];        
+        %infos.time = [infos.time elapsed_time];        
         infos.grad_calc_count = [infos.grad_calc_count iter*n];      
         infos.optgap = [infos.optgap optgap];        
         infos.cost = [infos.cost f_val];
