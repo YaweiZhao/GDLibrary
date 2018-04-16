@@ -138,7 +138,7 @@ function [w, infos] = gd_nesterov(problem, options)
     y = w;
     
     % set start time
-    start_time = tic();  
+    %start_time = tic();  
     
     % print info
     if verbose
@@ -171,7 +171,7 @@ function [w, infos] = gd_nesterov(problem, options)
         gnorm = norm(grad);
         
         % measure elapsed time
-        elapsed_time = toc(start_time);        
+        %elapsed_time = toc(start_time);        
 
         % store infoa
         infos.iter = [infos.iter iter];
