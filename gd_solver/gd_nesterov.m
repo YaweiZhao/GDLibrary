@@ -233,12 +233,14 @@ function [w, infos] = gd_nesterov(problem, options)
         
     end
     
-    if gnorm < tol_gnorm
-        fprintf('Gradient norm tolerance reached: tol_gnorm = %g\n', tol_gnorm);
-    elseif optgap < tol_optgap
-        fprintf('Optimality gap tolerance reached: tol_optgap = %g\n', tol_optgap);        
-    elseif iter == max_iter
-        fprintf('Max iter reached: max_iter = %g\n', max_iter);
-    end    
+    if verbose
+        if gnorm < tol_gnorm
+            fprintf('Gradient norm tolerance reached: tol_gnorm = %g\n', tol_gnorm);
+        elseif optgap < tol_optgap
+            fprintf('Optimality gap tolerance reached: tol_optgap = %g\n', tol_optgap);        
+        elseif iter == max_iter
+            fprintf('Max iter reached: max_iter = %g\n', max_iter);
+        end   
+    end
     
 end
